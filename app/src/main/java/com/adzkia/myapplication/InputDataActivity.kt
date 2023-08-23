@@ -1,5 +1,6 @@
 package com.adzkia.myapplication
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.RadioButton
@@ -36,6 +37,29 @@ class InputDataActivity : AppCompatActivity() {
             if ((binding.chkPerokok.isChecked)) {
                 perokok = "Tidak"
             }
+
+            val intent = Intent (this@InputDataActivity, HasilInputActivity::class.java).apply {
+               putExtra(TAG_NAME, nama)
+               putExtra(TAG_EMAIL, email)
+               putExtra(TAG_PHONE, nohp)
+               putExtra(TAG_ADDRESS, alamat)
+               putExtra(TAG_GENDER, jekel)
+               putExtra(TAG_HOUSE, jenisTinggal)
+               putExtra(TAG_SMOKING, perokok)
+            }
+
+            startActivity(intent)
+
+
         }
+    }
+    companion object{
+        const val TAG_NAME = "nama"
+        const val TAG_EMAIL = "email"
+        const val TAG_PHONE = "noHp"
+        const val TAG_ADDRESS = "alamat"
+        const val TAG_GENDER = "jekel"
+        const val TAG_HOUSE = "jenisTinggal"
+        const val TAG_SMOKING = "perokok"
     }
 }

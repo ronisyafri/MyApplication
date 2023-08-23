@@ -1,5 +1,6 @@
 package com.adzkia.myapplication
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
@@ -67,6 +68,11 @@ class CalculatorActivity : AppCompatActivity() {
             } else {
                 Toast.makeText(this@CalculatorActivity, "Input tidak boleh kosong", Toast.LENGTH_SHORT).show()
             }
+        }
+
+        binding.btnNext.setOnClickListener {
+            val intent = Intent (this@CalculatorActivity, InputDataActivity::class.java)
+            startActivity(intent)
         }
     }
 }
