@@ -13,7 +13,7 @@ import com.adzkia.myapplication.databinding.ActivityHasilInputBinding
 
 class HasilInputActivity : AppCompatActivity() {
 
-    private lateinit var binding:ActivityHasilInputBinding
+    private lateinit var binding: ActivityHasilInputBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -27,5 +27,19 @@ class HasilInputActivity : AppCompatActivity() {
         val gender = intent.getStringExtra(TAG_GENDER)
         val house = intent.getStringExtra(TAG_HOUSE)
         val smoking = intent.getStringExtra(TAG_SMOKING)
+
+        binding.apply {
+            tvName.text = nama
+            tvEmail.text = email
+            tvHp.text = phone
+            tvAddress.text = address
+            tvGender.text = gender
+            tvHouse.text = house
+            tvSmoking.text = smoking
+
+            ivBack.setOnClickListener {
+                finish()
+            }
+        }
     }
 }

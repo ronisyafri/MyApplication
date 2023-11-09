@@ -31,6 +31,7 @@
     <string name="jenis_tempat_tinggal">Jenis Tempat Tinggal</string>
     <string name="apakah_perokok">Apakah Perokok</string>
     <string name="tidak">Tidak</string>
+    <string name="kembali">kembali</string>
     <string-array name="tempat_tinggal_">
         <item>Bersama Orang Tua</item>
         <item>Apartemen</item>
